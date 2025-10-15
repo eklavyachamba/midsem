@@ -1,0 +1,8 @@
+Q1. Monte Carlo Estimation of Ellipse Area
+Semi-major axis (a) = 2
+Semi-minor axis (b) = 1
+Random points used  = 50000
+Estimated area      = 6.280960
+Analytical area     = 6.283185
+Percentage error    = 0.035%
+================================================================================
