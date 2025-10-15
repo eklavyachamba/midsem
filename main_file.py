@@ -56,26 +56,26 @@ def log(text="\n"):
     with open(OUTPUT_FILE2, "a") as f:
         f.write(str(text) + "\n")
 
-# --- Constants
+# Constants
 h = 6.626e-34       # Planck's constant (J·s)
 k = 1.381e-23       # Boltzmann constant (J/K)
 c = 3e8             # Speed of light (m/s)
 
-# --- Define function and its derivative ---
+# Define function and its derivative
 def f(x):
     return (x - 5) * math.exp(x) + 5
 
 def df(x):
     return math.exp(x) * (x - 4)
 
-# --- Solve using Newton–Raphson ---
+# Solve using Newton–Raphson
 solver = NewtonRaphson(f, df, x0=5.0, tol=1e-6, outfile=OUTPUT_FILE2)
 root, iters = solver.solve()
 
-# --- Compute Wien’s constant ---
+# Compute Wien’s constant
 b = h * c / (k * root)
 
-# --- Display and save results ---
+# Display and save results
 log("Q2. Wien’s displacement law using Newton–Raphson method")
 log("Equation solved: (x - 5)e^x + 5 = 0")
 log(f"Initial guess = 5.0")
